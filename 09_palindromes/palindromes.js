@@ -1,5 +1,5 @@
 const palindromes = function (string) { 
-  let bool = true;
+  //let bool = true;
   //normalizing the input to all lowercase, no punctuation, etc.
   string = string.replace(/[.,'"\/#!$%\^&\*;:{}=\-_`~()]/g,"");
   string = string.replace(/\s/g,"");
@@ -19,16 +19,16 @@ const palindromes = function (string) {
   //so now we have two arrays of lowercase letters that we have to compare
   
   if (array.length !== reversed.length) {
-    bool = false
+    return false
   }
   
   for (let i=0; i<array.length; i++) {
     if (array[i] !== reversed[i]) {
-      bool = false
+      return false
     }
   }
   
-  return bool
+  return true
 }
 // Do not edit below this line
 module.exports = palindromes;
